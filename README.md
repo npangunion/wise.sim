@@ -1,21 +1,45 @@
-# 개요 
+# Goal 
 
-RPG 시뮬레이터로 개발한다. 데이터 게임을 만들고 테스트 하기위한 프레임워크이다. 
-다른 게임을 만들 때 복사해서 데이터 게임을 만들어 보고 검증하기 위한 도구이다. 
+Project is initiated as of May, 2020. 
 
-# 기능 
+wise.sim is in development stage.
 
-- 클라이언트 / 서버 모델 
-- 봇 기반 시뮬레이션 
-- 캐릭터 
-  - 스탯 
-- 아이템
-- 스킬 
-- PvE 사냥 
-- PvP 사냥 
-- 퀘스트 시뮬레이션 
-  - 보상 
-  - 시간 분포 
+wise.sim is a game simulation environment to: 
+* develop and verifiy game design with simulation implementation 
+* use reinforcement learning to enhance game mechanics 
+* load-test server with protocol plugin 
 
-아직 무엇이 될 지는 모른다. 해봐야 아는 경우가 허다하다. 
+
+## Architecture 
+
+* use Unreal Engine 4 (UE4, here after) for visual rendering and processing
+* use python for simulation and loadtest 
+
+
+## Roadmap 
+
+* research and integrate machine learning libraries 
+  * RLLib 
+* make python a script language for game play of UE4 
+* build pipelines for :
+  * simulation development 
+  * RL 
+  * loadtest
+
+
+### Research: RLLib 
+
+RLLib seems to be a good library to learn reinforcement learning with hands-on practicing. 
+It is integrated with OpenAI Gym and has Ray and Tune for distributed learning and hyperparameter tuning. 
+
+Experience and experiments are important to have concrete and actual skills to handle NN for RL to solve RL problems. 
+
+The idea is to replace OpenAI Gym to UE4 as an environment to make the overall environment and visual effects be more like games or games. 
+
+### python in UE4 
+
+UE4 has python support as a scripting language, but in editor only. There are other efforts to bring python to UE4 for scripting game play. 
+
+Research those ideas and build a full interface and environment to develop application and games in python. This is the first big step. 
+
 
